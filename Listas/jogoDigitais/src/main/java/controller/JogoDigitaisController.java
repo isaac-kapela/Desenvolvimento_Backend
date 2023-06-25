@@ -34,13 +34,13 @@ public class JogoDigitaisController {
         return null;
     }
 
-    @GetMapping
-    public JogoDigitais getMenorPreco() {
-        int menorPreco = 0;
+    @GetMapping("/menorPreco")
+    public JogoDigitais getByyMenorPreco() {
+        double menorPreco = 0;
         int index = 0;
         for (int i = 0; i < jogoDigitais.size(); i++) {
             if (jogoDigitais.get(i).getPreco() < menorPreco) {
-                menorPreco = (int) jogoDigitais.get(i).getPreco();
+                menorPreco = (double) jogoDigitais.get(i).getPreco();
                 index = i;
             }
         }
@@ -49,7 +49,16 @@ public class JogoDigitaisController {
 
     @PostMapping
     public String save(@RequestBody JogoDigitais jogoDigitais){
-        this.jogoDigitais.add(jogoDigitais);
-        return "Jogo"+ jogoDigitais.getNome()+ "foi adicionado ao catalogo!";
+        for (JogoDigitais jogoDigitais1 : jogoDigitais){
+            if (jogoDigitais1.getId() == jogoDigitais.getId()){
+                return " O jogo ja existe";
+            }
+            else {
+                jogoDigitais.add(jogoDigitais);
+                return "O jogo" + jogoDigitais. getNome() + " foi adicionado com sucesso";
+            }
+        }
+        return null;
+
     }
 }

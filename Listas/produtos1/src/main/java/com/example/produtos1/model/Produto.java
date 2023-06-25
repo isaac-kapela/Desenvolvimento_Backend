@@ -1,25 +1,25 @@
-package model;
+package com.example.produtos1.model;
 
-public class Produtos {
-    private int codigoDeBarras;
+public class Produto {
+    private int codigoDeBarra;
     private String nome;
     private double preco;
 
-    public Produtos() {
+    public Produto() {
     }
 
-    public Produtos(int codigoDeBarras, String nome, double preco) {
-        this.codigoDeBarras = codigoDeBarras;
+    public Produto(int codigoDeBarra, String nome, double preco) {
+        this.codigoDeBarra = codigoDeBarra;
         this.nome = nome;
         this.preco = preco;
     }
 
-    public int getCodigoDeBarras() {
-        return codigoDeBarras;
+    public int getCodigoDeBarra() {
+        return codigoDeBarra;
     }
 
-    public void setCodigoDeBarras(int codigoDeBarras) {
-        this.codigoDeBarras = codigoDeBarras;
+    public void setCodigoDeBarra(int codigoDeBarra) {
+        this.codigoDeBarra = codigoDeBarra;
     }
 
     public String getNome() {
