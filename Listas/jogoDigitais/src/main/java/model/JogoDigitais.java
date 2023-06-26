@@ -38,5 +38,4 @@ public class JogoDigitais {
         this.preco = preco;
     }
 
-
 }

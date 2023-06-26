@@ -35,12 +35,12 @@ public class JogoDigitaisController {
     }
 
     @GetMapping("/menorPreco")
-    public JogoDigitais getByyMenorPreco() {
-        double menorPreco = 0;
+    public JogoDigitais getByMenorPreco() {
+        double menorPreco = jogoDigitais.get(0).getPreco();
         int index = 0;
         for (int i = 0; i < jogoDigitais.size(); i++) {
             if (jogoDigitais.get(i).getPreco() < menorPreco) {
-                menorPreco = (double) jogoDigitais.get(i).getPreco();
+                menorPreco = jogoDigitais.get(i).getPreco();
                 index = i;
             }
         }
