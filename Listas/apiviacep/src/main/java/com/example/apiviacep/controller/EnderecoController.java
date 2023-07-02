@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("/enderecos")
+@RequestMapping("/{enderecos}")
 public class EnderecoController {
 
-    @GetMapping("{/cep}")
+    @GetMapping("/{cep}")
     public Endreco obterEndereco(@PathVariable String cep){
         String url = "https://viacep.com.br/ws/" + cep + "/json/";
 
