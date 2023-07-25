@@ -38,4 +38,6 @@ public class JogoDigitais {
         this.preco = preco;
     }
 
+    public void add(JogoDigitais jogoDigitais) {
+    }
 }
