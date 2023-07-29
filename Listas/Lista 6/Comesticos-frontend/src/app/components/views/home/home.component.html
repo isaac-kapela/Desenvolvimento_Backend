@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row d-flex justify-content-center" *ngFor="let Comestico of Comesticos">
+
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{Comestico.nome}}</h5>
+        <p class="card-text"></p>
+
+      <div class="container d-flex justify-content-center">
+        <span class="badge badge-pill badge-success P-2 mr-3">{{Comestico.preco}}</span>
+        <a href="#" class="btn btn-primary">Comprar</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
