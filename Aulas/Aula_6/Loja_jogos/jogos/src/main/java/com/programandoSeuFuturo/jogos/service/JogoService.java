@@ -1,7 +1,7 @@
 package com.programandoSeuFuturo.jogos.service;
 
 import com.programandoSeuFuturo.jogos.model.Jogo;
-import com.programandoSeuFuturo.jogos.repository.BancoDeDados;
+import com.programandoSeuFuturo.jogos.repository.jogoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,15 +10,13 @@ import java.util.List;
 @Service
 public class JogoService {
     @Autowired
-    private BancoDeDados bancoDeDados;
+    private jogoRepository jogoRepository;
 
     public List<Jogo> getAll(){
-        return bancoDeDados.findAll();
+        return jogoRepository.findAll();
     }
     public Jogo save(Jogo jogo){
-        return bancoDeDados.save(jogo);
+        return jogoRepository.save(jogo);
     }
-    public String delete(int id){
-        return bancoDeDados.delete(id);
-    }
+
 }
