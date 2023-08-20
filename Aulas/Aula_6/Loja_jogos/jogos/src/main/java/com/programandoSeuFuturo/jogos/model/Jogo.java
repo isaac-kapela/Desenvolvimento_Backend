@@ -1,12 +1,11 @@
 package com.programandoSeuFuturo.jogos.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.lang.NonNull;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.util.List;
 
 
 @Entity
@@ -16,21 +15,38 @@ public class Jogo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NonNull
+    @NotNull
     private String nome;
 
     private String descricao;
 
-    @NonNull
+   @NotNull
     private String imagem;
 
-    @NonNull
+   @NotNull
     private double preco;
 
     @JsonProperty("esta_favoritado")
     private boolean estaFavoritado;
 
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    @JsonIgnoreProperties("jogos")
+    private  Categoria categoria;
 
+    @ManyToOne
+    @JoinColumn(name = "conta_id")
+    @JsonIgnoreProperties("jogos")
+    private Conta conta;
+
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
     public int getId() {
         return id;
@@ -79,4 +95,14 @@ public class Jogo {
     public void setEstaFavoritado(boolean estaFavoritado) {
         this.estaFavoritado = estaFavoritado;
     }
+
+    public Conta getConta() {
+        return conta;
+    }
+
+    public void setConta(Conta conta) {
+        this.conta = conta;
+    }
+
+
 }
