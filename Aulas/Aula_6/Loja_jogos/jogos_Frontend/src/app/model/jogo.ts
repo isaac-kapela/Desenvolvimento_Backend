@@ -3,6 +3,7 @@ export class Jogo{
   public nome!: string;
   public descricao!: string;
   public preco!: number;
-  public imagem!: string;
+  public imagem!:String;
   public esta_favoritado!: boolean;
+  
 }
