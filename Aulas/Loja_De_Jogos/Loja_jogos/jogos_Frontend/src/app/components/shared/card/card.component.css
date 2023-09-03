@@ -1,0 +1,51 @@
+
+.card{
+    box-shadow: 2px 2px 5px black;
+}
+
+.card-body{
+    border-top: solid 1px bisque;
+}
+
+.heart{
+    margin-right: 5px ;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s ease;
+    font-size: 19px;
+}
+
+.heart  :hover{
+    color: #e74c3c;
+    font-size: 19px;
+
+}
+.favoritar {
+    font-size: 19px;
+    color: rgb(197, 187, 187);
+    cursor: pointer;
+}
+.favoritado{
+    color: #e74c3c;
+}
+.X-circle{
+    font-size: 15px;
+    color: rgb(19, 1, 1);
+    position: absolute;
+    top: -3px;
+    left: 30px;
+    z-index: 1;
+}
+.X-circle:hover {
+    cursor: pointer;
+    color: red;
+    
+}
+
+.estaFavoritado {
+    color: red;
+}
+.bagde{
+    font-size: 13px;
+    letter-spacing: .1rem;
+}
