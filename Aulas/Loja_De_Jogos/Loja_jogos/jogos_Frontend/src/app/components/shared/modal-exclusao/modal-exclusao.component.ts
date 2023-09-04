@@ -16,7 +16,7 @@ constructor(private jogoService: JogoService){}
     this.jogoService.jogoAserExcluido$.subscribe((jogo) =>{
       this.jogoAserExcluido = jogo;
 
-    })
+    });
     
   }
 
