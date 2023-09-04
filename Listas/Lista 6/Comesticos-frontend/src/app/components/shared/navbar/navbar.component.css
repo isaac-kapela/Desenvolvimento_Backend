@@ -1,0 +1,24 @@
+.menu {
+    display: flex;
+    background-color:  #000000;
+    border-radius: 30px;
+
+    justify-content: space-around;
+    margin: 20px;
+   } 
+
+.menu a {
+    text-decoration: none;
+    margin: 10px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    color: #ff3333;
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+
+.menu a:hover {
+    font-size: 32px;
+    color: rgb(253, 255, 255);
+}

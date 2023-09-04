@@ -1,27 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { Comestico } from 'src/app/model/Comestico';
-import { comesticoService } from 'src/app/service/comestico.service';
+import { Cosmetico } from 'src/app/models/cosmetico';
+import { CosmeticoService } from 'src/app/services/cosmetico.service';
 
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css']
 })
-export class CadastroComponent implements OnInit {
+export class CadastroComponent implements OnInit{
+  
+  public cosmetico: Cosmetico = new Cosmetico()
 
-  comestico: Comestico = new Comestico();
+  constructor(private cosmeticoService: CosmeticoService) { }
 
-    constructor(private comesticoService: comesticoService) {}
-  ngOnInit() {
-
+  ngOnInit(): void {
+    
   }
 
-  saveComestico(){
-    this.comesticoService.postComestico(this.comestico).subscribe(res => {
-      alert(" O Comestico" + this.comestico.nome + " foi cadastrado com sucesso!")
+  saveCosmetico(){
+    this.cosmeticoService.postCosmetico(this.cosmetico).subscribe(resposta => {
+      alert("O cosmético " + this.cosmetico.nome + " foi cadastrado com sucesso!")
     })
-
-}
-
+  }
 
 }

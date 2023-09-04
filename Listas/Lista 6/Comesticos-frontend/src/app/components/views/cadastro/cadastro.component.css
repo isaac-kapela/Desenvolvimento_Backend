@@ -1,0 +1,31 @@
+.form {
+    display: flex;
+    align-items: center;
+    margin-top: 200px;
+    flex-direction: column;
+    
+  }
+  
+  .form input, button {
+    width: 400px;
+    height: 35px;
+    margin-top: 10px;
+    border: 2px solid #080101;
+    border-radius: 7px;
+  }
+  
+  .form button {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    width: 200px;
+    border-radius: 5px;
+    color: #FFF;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    
+  }
+  
+  .form button:hover {
+    background-color: #ff3333;
+  }
+  
