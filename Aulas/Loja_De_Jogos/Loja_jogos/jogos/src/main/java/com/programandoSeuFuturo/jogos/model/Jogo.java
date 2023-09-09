@@ -35,10 +35,7 @@ public class Jogo {
     @JsonIgnoreProperties("jogos")
     private  Categoria categoria;
 
-    @ManyToOne
-    @JoinColumn(name = "conta_id")
-    @JsonIgnoreProperties("jogos")
-    private Conta conta;
+
 
 
     public Categoria getCategoria() {
@@ -97,13 +94,6 @@ public class Jogo {
         this.estaFavoritado = estaFavoritado;
     }
 
-    public Conta getConta() {
-        return conta;
-    }
-
-    public void setConta(Conta conta) {
-        this.conta = conta;
-    }
 
 
 }
