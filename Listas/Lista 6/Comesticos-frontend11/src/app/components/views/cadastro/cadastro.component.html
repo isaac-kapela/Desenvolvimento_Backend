@@ -1,0 +1,23 @@
+<form>
+  <input type="number" name="primeiro-campo" id="id"
+  [(ngModel)] = "comestico.id" placeholder="Insira o id do jogo">
+
+  <input type="text" name="Segundo-campo" id="imagem"
+  [(ngModel)] = "comestico.img" placeholder="Insira a imagem do comestico">
+
+  <input type="text" name="Terceiro-campo" id="nome"
+  [(ngModel)] = "comestico.nome" placeholder="Insira o nome do comestico">
+
+  <input type="text" name="Quarto-campo" id="descricao"
+  [(ngModel)] = "comestico.descricao" placeholder="Insira descricao do comestico">
+
+  <input type="number" name="Quinto-campo" id="preco"
+  [(ngModel)] = "comestico.preco" placeholder="Insira o preco do comestico">
+
+  <button class="btn btn-primary" (click)="saveComestico()">enviar</button>
+
+
+
+</form>
+
+
